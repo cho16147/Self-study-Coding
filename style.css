@@ -1,0 +1,399 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* ===== reset css ends ===== */
+
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@500&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 1140px;
+  margin: 0 auto;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  padding: 1rem;
+  background-color: black;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+header nav ul {
+  display: flex;
+}
+
+header nav ul li {
+  padding: 10px;
+}
+
+header button {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+header h1 button {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+
+header nav ul li button {
+  font-size: 1.2rem;
+  color: white;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  color: white;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./me.jpg") center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+main h4 {
+  font-size: 2rem;
+}
+
+main h2 {
+  font-size: 3.5rem;
+  margin: 2rem 0;
+  letter-spacing: 3px;
+  font-family: "Merriweather Sans", sans-serif;
+}
+
+main p {
+  max-width: 500px;
+  margin: 0 auto;
+  font-size: 1.25rem;
+}
+
+main button.download {
+  background-color: transparent;
+  border: 3px solod white;
+  border-radius: 20px;
+  padding: 1rem 2rem;
+  margin-top: 3rem;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+main button.mouse {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: upDown 1s ease-in-out infinite;
+  cursor: pointer;
+}
+
+@keyframes upDown {
+  0% {
+    bottom: 1rem;
+  }
+  50% {
+    bottom: 1.5rem;
+  }
+  100% {
+    bottom: 1rem;
+  }
+}
+
+main h2 span::after {
+  content: "";
+  height: 40px;
+  width: 3px;
+  background-color: white;
+  display: inline-block;
+  animation: blink 0.7s steps(2) infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+section {
+  font-family: "Merriweather Sans", sans-serif;
+  padding: 5rem 0;
+}
+
+section:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+section .title {
+  margin-bottom: 3rem;
+}
+
+section .title h4 {
+  font-size: 1.35rem;
+  color: #ed4848;
+  position: relative;
+}
+
+section .title h2 {
+  font-size: 3.5rem;
+}
+
+section .title p {
+  font-size: 1.15rem;
+}
+
+section .about_self::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+section .about_self {
+  display: flex;
+}
+
+section .about_self .left {
+  width: 50%;
+  float: left;
+}
+
+section .about_self .left img {
+  max-width: 100%;
+}
+
+section .about_self .right {
+  padding: 0 2rem;
+  width: 50%;
+  float: right;
+  position: relative;
+}
+
+section .about_self .right h3 {
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
+}
+
+section .about_self .right h3 strong {
+  color: #ed4848;
+}
+
+section .about_self .right p {
+  font-size: 1.15rem;
+  margin: 1rem 0;
+  line-height: normal;
+}
+
+section .about_self .right .social {
+  bottom: 1rem;
+}
+
+section .about_self .right .social a {
+  font-size: 2.5rem;
+  margin-right: 0.5rem;
+  color: black;
+}
+
+section .do_me .do_inner {
+  display: flex;
+  background-color: #f8f8f8;
+  padding: 0 2rem;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+section .do_me .do_inner .content {
+  background-color: white;
+  margin: 0 1rem;
+  padding: 1rem;
+  justify-content: space-around;
+}
+
+section .do_me .do_inner .icon i {
+  font-size: 2.5rem;
+  color: #ff6a6a;
+  display: inline;
+}
+
+section .do_me .do_inner .content h3 {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+section .do_me .do_inner .content p {
+  font-size: 1.15rem;
+}
+
+section .do_me .do_inner .content:hover {
+  background-color: lightcoral;
+  color: white;
+}
+
+section .do_me .do_inner .content:hover i {
+  color: white;
+}
+
+.background {
+  background: url(./background.jpg) center center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 650px;
+}
+
+.portfolio_inner img {
+  width: 300px; /* 원하는 가로 크기 */
+  height: 300px; /* 원하는 세로 크기 */
+}
+
+.portfolio_inner {
+  width: 300px; /* 원하는 가로 크기 */
+}
